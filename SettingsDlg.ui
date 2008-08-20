@@ -1,0 +1,317 @@
+<ui version="4.0" >
+ <class>SettingsDlg</class>
+ <widget class="QDialog" name="SettingsDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>337</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Settings</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="1" column="0" >
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QTabWidget" name="tabWidget" >
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>378</width>
+        <height>258</height>
+       </rect>
+      </property>
+      <attribute name="title" >
+       <string>Device</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3" >
+       <item row="0" column="0" >
+        <widget class="QLabel" name="label" >
+         <property name="text" >
+          <string>Device node</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" >
+        <widget class="QLineEdit" name="lineDevice" />
+       </item>
+       <item row="1" column="0" colspan="2" >
+        <widget class="QGroupBox" name="groupBox" >
+         <property name="title" >
+          <string>Current device</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2" >
+          <item row="0" column="0" >
+           <widget class="QLabel" name="label_2" >
+            <property name="text" >
+             <string>Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="QLineEdit" name="lineDeviceName" >
+            <property name="frame" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="label_3" >
+            <property name="text" >
+             <string>Tuner name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" >
+           <widget class="QLineEdit" name="lineTunerName" >
+            <property name="frame" >
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="label_4" >
+            <property name="text" >
+             <string>Frequency range</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QLabel" name="labelFrequencyRange" />
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="1" >
+        <spacer name="verticalSpacer" >
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>103</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2" >
+      <property name="geometry" >
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>378</width>
+        <height>258</height>
+       </rect>
+      </property>
+      <attribute name="title" >
+       <string>Sound</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4" >
+       <item row="0" column="0" >
+        <widget class="QLabel" name="label_5" >
+         <property name="text" >
+          <string>TV card's sound device</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" >
+        <widget class="QComboBox" name="comboInputDevice" />
+       </item>
+       <item row="1" column="0" >
+        <widget class="QLabel" name="label_6" >
+         <property name="text" >
+          <string>Output ALSA device</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" >
+        <widget class="QLineEdit" name="lineOutputDevice" />
+       </item>
+       <item row="2" column="0" >
+        <spacer name="verticalSpacer_2" >
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0" >
+          <size>
+           <width>20</width>
+           <height>179</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3" >
+      <attribute name="title" >
+       <string>Presets</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5" >
+       <item row="0" column="0" >
+        <widget class="QLabel" name="label_7" >
+         <property name="text" >
+          <string>Lists</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" >
+        <widget class="QComboBox" name="comboSets" >
+         <property name="sizePolicy" >
+          <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" >
+        <widget class="QPushButton" name="pushListAdd" >
+         <property name="toolTip" >
+          <string>Add a new list</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="gfx/resources.qrc" >
+           <normaloff>:/menu/add.png</normaloff>:/menu/add.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3" >
+        <widget class="QPushButton" name="pushListRemove" >
+         <property name="toolTip" >
+          <string>Remove the selected list</string>
+         </property>
+         <property name="icon" >
+          <iconset resource="gfx/resources.qrc" >
+           <normaloff>:/menu/remove.png</normaloff>:/menu/remove.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="4" >
+        <widget class="QGroupBox" name="groupBox_2" >
+         <property name="title" >
+          <string>Stations</string>
+         </property>
+         <property name="flat" >
+          <bool>true</bool>
+         </property>
+         <widget class="ContextTreeWidget" name="treeStations" >
+          <property name="geometry" >
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>331</width>
+            <height>171</height>
+           </rect>
+          </property>
+          <property name="acceptDrops" >
+           <bool>true</bool>
+          </property>
+          <property name="dragEnabled" >
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode" >
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="alternatingRowColors" >
+           <bool>true</bool>
+          </property>
+          <property name="indentation" >
+           <number>0</number>
+          </property>
+          <property name="rootIsDecorated" >
+           <bool>false</bool>
+          </property>
+          <property name="itemsExpandable" >
+           <bool>false</bool>
+          </property>
+          <property name="expandsOnDoubleClick" >
+           <bool>false</bool>
+          </property>
+          <property name="columnCount" >
+           <number>2</number>
+          </property>
+          <column>
+           <property name="text" >
+            <string>1</string>
+           </property>
+          </column>
+          <column>
+           <property name="text" >
+            <string>2</string>
+           </property>
+          </column>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+  <zorder>buttonBox</zorder>
+  <zorder>tabWidget</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ContextTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>ContextTreeWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="gfx/resources.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDlg</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>227</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>295</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

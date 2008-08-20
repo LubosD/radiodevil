@@ -1,0 +1,155 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QDialog" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>328</width>
+    <height>130</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>RadioDevil</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="gfx/resources.qrc" >
+    <normaloff>:/app/radiodevil-48x48.png</normaloff>:/app/radiodevil-48x48.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item rowspan="3" row="0" column="0" >
+    <widget class="QSlider" name="sliderVolume" >
+     <property name="toolTip" >
+      <string>Volume</string>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item rowspan="2" row="0" column="1" >
+    <widget class="FrequencyDisplay" native="1" name="widgetDisplay" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" >
+    <widget class="QPushButton" name="pushSettings" >
+     <property name="toolTip" >
+      <string>Settings</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="gfx/resources.qrc" >
+       <normaloff>:/menu/settings.png</normaloff>:/menu/settings.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>18</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1" colspan="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QToolButton" name="toolPreset" >
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="popupMode" >
+        <enum>QToolButton::InstantPopup</enum>
+       </property>
+       <property name="arrowType" >
+        <enum>Qt::DownArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboPresets" >
+       <property name="duplicatesEnabled" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QPushButton" name="pushMute" >
+     <property name="toolTip" >
+      <string>Mute</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="gfx/resources.qrc" >
+       <normaloff>:/menu/mute.png</normaloff>:/menu/mute.png</iconset>
+     </property>
+     <property name="checkable" >
+      <bool>true</bool>
+     </property>
+     <property name="autoDefault" >
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2" >
+    <widget class="QSlider" name="sliderFrequency" >
+     <property name="toolTip" >
+      <string>Frequency</string>
+     </property>
+     <property name="minimum" >
+      <number>30</number>
+     </property>
+     <property name="singleStep" >
+      <number>1</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <action name="actionDisplay" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Display main window</string>
+   </property>
+  </action>
+  <action name="actionQuit" >
+   <property name="icon" >
+    <iconset resource="gfx/resources.qrc" >
+     <normaloff>:/menu/quit.png</normaloff>:/menu/quit.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FrequencyDisplay</class>
+   <extends>QWidget</extends>
+   <header>FrequencyDisplay.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="gfx/resources.qrc" />
+ </resources>
+ <connections/>
+</ui>

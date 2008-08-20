@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/menu" >
+    <file>quit.png</file>
+    <file>miscellaneous.png</file>
+    <file>add.png</file>
+    <file>remove.png</file>
+    <file>settings.png</file>
+    <file>mute.png</file>
+  </qresource>
+  <qresource prefix="/app" >
+    <file>radiodevil-48x48.png</file>
+  </qresource>
+</RCC>
